@@ -1,0 +1,815 @@
+<ui version="4.0" >
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow" >
+  <property name="enabled" >
+   <bool>true</bool>
+  </property>
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>648</width>
+    <height>431</height>
+   </rect>
+  </property>
+  <property name="sizePolicy" >
+   <sizepolicy vsizetype="Fixed" hsizetype="Fixed" >
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle" >
+   <string>DoveCot Administrator</string>
+  </property>
+  <widget class="QWidget" name="centralwidget" >
+   <widget class="QTabWidget" name="tab_mainWidget" >
+    <property name="enabled" >
+     <bool>true</bool>
+    </property>
+    <property name="geometry" >
+     <rect>
+      <x>10</x>
+      <y>40</y>
+      <width>631</width>
+      <height>341</height>
+     </rect>
+    </property>
+    <property name="currentIndex" >
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="tab_domains" >
+     <attribute name="title" >
+      <string>Domains</string>
+     </attribute>
+     <widget class="QLineEdit" name="txt_domainName" >
+      <property name="geometry" >
+       <rect>
+        <x>283</x>
+        <y>31</y>
+        <width>332</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="alignment" >
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_domainUpdate" >
+      <property name="geometry" >
+       <rect>
+        <x>540</x>
+        <y>280</y>
+        <width>75</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text" >
+       <string>Update</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_domainRemove" >
+      <property name="geometry" >
+       <rect>
+        <x>460</x>
+        <y>280</y>
+        <width>75</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text" >
+       <string>Remove</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label" >
+      <property name="geometry" >
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>101</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="font" >
+       <font>
+        <pointsize>12</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="text" >
+       <string>Domain List</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_3" >
+      <property name="geometry" >
+       <rect>
+        <x>549</x>
+        <y>9</y>
+        <width>62</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="font" >
+       <font>
+        <pointsize>12</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="text" >
+       <string>Domain</string>
+      </property>
+      <property name="alignment" >
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_domainClear" >
+      <property name="geometry" >
+       <rect>
+        <x>380</x>
+        <y>280</y>
+        <width>75</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text" >
+       <string>Clear</string>
+      </property>
+     </widget>
+     <widget class="QListWidget" name="list_domains" >
+      <property name="geometry" >
+       <rect>
+        <x>10</x>
+        <y>30</y>
+        <width>256</width>
+        <height>271</height>
+       </rect>
+      </property>
+      <property name="sortingEnabled" >
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_domainAdd" >
+      <property name="enabled" >
+       <bool>true</bool>
+      </property>
+      <property name="geometry" >
+       <rect>
+        <x>540</x>
+        <y>280</y>
+        <width>75</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text" >
+       <string>Add</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="cbx_createDomainAlias" >
+      <property name="geometry" >
+       <rect>
+        <x>470</x>
+        <y>250</y>
+        <width>141</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font" >
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text" >
+       <string>Alias Functions</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="txt_domainAlias" >
+      <property name="enabled" >
+       <bool>true</bool>
+      </property>
+      <property name="geometry" >
+       <rect>
+        <x>284</x>
+        <y>80</y>
+        <width>331</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="alignment" >
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lbl_alias" >
+      <property name="geometry" >
+       <rect>
+        <x>487</x>
+        <y>56</y>
+        <width>125</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="font" >
+       <font>
+        <pointsize>12</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="text" >
+       <string>Alias of Domain</string>
+      </property>
+      <property name="alignment" >
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_users" >
+     <attribute name="title" >
+      <string>Users</string>
+     </attribute>
+     <widget class="QListWidget" name="list_users" >
+      <property name="geometry" >
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>251</width>
+        <height>291</height>
+       </rect>
+      </property>
+      <property name="sortingEnabled" >
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_userClear" >
+      <property name="geometry" >
+       <rect>
+        <x>380</x>
+        <y>280</y>
+        <width>75</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text" >
+       <string>Clear</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_userRemove" >
+      <property name="geometry" >
+       <rect>
+        <x>460</x>
+        <y>280</y>
+        <width>75</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text" >
+       <string>Remove</string>
+      </property>
+     </widget>
+     <widget class="QTabWidget" name="tab_userWidget" >
+      <property name="geometry" >
+       <rect>
+        <x>280</x>
+        <y>10</y>
+        <width>341</width>
+        <height>261</height>
+       </rect>
+      </property>
+      <property name="currentIndex" >
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="tab_userInfo" >
+       <attribute name="title" >
+        <string>User Info</string>
+       </attribute>
+       <widget class="QLineEdit" name="txt_userUserName" >
+        <property name="geometry" >
+         <rect>
+          <x>110</x>
+          <y>50</y>
+          <width>221</width>
+          <height>20</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="txt_userPasswd" >
+        <property name="geometry" >
+         <rect>
+          <x>110</x>
+          <y>90</y>
+          <width>221</width>
+          <height>20</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_4" >
+        <property name="geometry" >
+         <rect>
+          <x>10</x>
+          <y>50</y>
+          <width>90</width>
+          <height>22</height>
+         </rect>
+        </property>
+        <property name="font" >
+         <font>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="text" >
+         <string>User Name</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_5" >
+        <property name="geometry" >
+         <rect>
+          <x>10</x>
+          <y>90</y>
+          <width>75</width>
+          <height>22</height>
+         </rect>
+        </property>
+        <property name="font" >
+         <font>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="text" >
+         <string>Password</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="txt_userHomeDir" >
+        <property name="enabled" >
+         <bool>true</bool>
+        </property>
+        <property name="geometry" >
+         <rect>
+          <x>110</x>
+          <y>130</y>
+          <width>221</width>
+          <height>20</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_6" >
+        <property name="geometry" >
+         <rect>
+          <x>10</x>
+          <y>130</y>
+          <width>76</width>
+          <height>22</height>
+         </rect>
+        </property>
+        <property name="font" >
+         <font>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="text" >
+         <string>Home Dir</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_7" >
+        <property name="geometry" >
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>87</width>
+          <height>22</height>
+         </rect>
+        </property>
+        <property name="font" >
+         <font>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="text" >
+         <string>Real Name</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="txt_userRealName" >
+        <property name="geometry" >
+         <rect>
+          <x>110</x>
+          <y>10</y>
+          <width>221</width>
+          <height>20</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="cbx_userHidePW" >
+        <property name="geometry" >
+         <rect>
+          <x>210</x>
+          <y>170</y>
+          <width>121</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="font" >
+         <font>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="text" >
+         <string>Hide Passwd</string>
+        </property>
+        <property name="checked" >
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QLabel" name="lbl_UserDirSize" >
+        <property name="geometry" >
+         <rect>
+          <x>10</x>
+          <y>170</y>
+          <width>111</width>
+          <height>25</height>
+         </rect>
+        </property>
+        <property name="font" >
+         <font>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="frameShape" >
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow" >
+         <enum>QFrame::Sunken</enum>
+        </property>
+        <property name="text" >
+         <string/>
+        </property>
+       </widget>
+       <widget class="QLabel" name="lbl_UserLastAccess" >
+        <property name="geometry" >
+         <rect>
+          <x>10</x>
+          <y>200</y>
+          <width>321</width>
+          <height>25</height>
+         </rect>
+        </property>
+        <property name="font" >
+         <font>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="frameShape" >
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow" >
+         <enum>QFrame::Sunken</enum>
+        </property>
+        <property name="text" >
+         <string/>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_userForward" >
+       <attribute name="title" >
+        <string>Forward Info</string>
+       </attribute>
+       <widget class="QTextEdit" name="txt_userForwardInfo" >
+        <property name="geometry" >
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>321</width>
+          <height>191</height>
+         </rect>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_userWhitelist" >
+       <attribute name="title" >
+        <string>Whitelist</string>
+       </attribute>
+       <widget class="QTextEdit" name="txt_userWhitelist" >
+        <property name="geometry" >
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>321</width>
+          <height>191</height>
+         </rect>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+     <widget class="QPushButton" name="btn_userAdd" >
+      <property name="geometry" >
+       <rect>
+        <x>540</x>
+        <y>280</y>
+        <width>75</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text" >
+       <string>Add</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_userUpdate" >
+      <property name="geometry" >
+       <rect>
+        <x>540</x>
+        <y>280</y>
+        <width>75</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text" >
+       <string>Update</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_aliases" >
+     <attribute name="title" >
+      <string>Aliases</string>
+     </attribute>
+     <widget class="QPushButton" name="btn_aliasRemove" >
+      <property name="geometry" >
+       <rect>
+        <x>460</x>
+        <y>280</y>
+        <width>75</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text" >
+       <string>Remove</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_aliasUpdate" >
+      <property name="geometry" >
+       <rect>
+        <x>540</x>
+        <y>280</y>
+        <width>75</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text" >
+       <string>Update</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_aliasClear" >
+      <property name="geometry" >
+       <rect>
+        <x>380</x>
+        <y>280</y>
+        <width>75</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text" >
+       <string>Clear</string>
+      </property>
+     </widget>
+     <widget class="QTabWidget" name="tab_aliasWidget" >
+      <property name="geometry" >
+       <rect>
+        <x>280</x>
+        <y>10</y>
+        <width>341</width>
+        <height>261</height>
+       </rect>
+      </property>
+      <property name="currentIndex" >
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="tab_aliasInfo" >
+       <attribute name="title" >
+        <string>User Info</string>
+       </attribute>
+       <widget class="QLineEdit" name="txt_aliasUserName" >
+        <property name="geometry" >
+         <rect>
+          <x>110</x>
+          <y>10</y>
+          <width>221</width>
+          <height>20</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_8" >
+        <property name="geometry" >
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>90</width>
+          <height>22</height>
+         </rect>
+        </property>
+        <property name="font" >
+         <font>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="text" >
+         <string>User Name</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_aliasForward" >
+       <attribute name="title" >
+        <string>Forward Info</string>
+       </attribute>
+       <widget class="QTextEdit" name="txt_aliasForwardInfo" >
+        <property name="geometry" >
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>321</width>
+          <height>191</height>
+         </rect>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_aliasWhitelist" >
+       <attribute name="title" >
+        <string>Whitelist</string>
+       </attribute>
+       <widget class="QTextEdit" name="txt_aliasWhitelist" >
+        <property name="geometry" >
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>321</width>
+          <height>191</height>
+         </rect>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+     <widget class="QPushButton" name="btn_aliasAdd" >
+      <property name="geometry" >
+       <rect>
+        <x>540</x>
+        <y>280</y>
+        <width>75</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text" >
+       <string>Add</string>
+      </property>
+     </widget>
+     <widget class="QListWidget" name="list_alias" >
+      <property name="geometry" >
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>251</width>
+        <height>291</height>
+       </rect>
+      </property>
+      <property name="sortingEnabled" >
+       <bool>true</bool>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QComboBox" name="cbo_topDomains" >
+    <property name="geometry" >
+     <rect>
+      <x>380</x>
+      <y>10</y>
+      <width>261</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2" >
+    <property name="geometry" >
+     <rect>
+      <x>237</x>
+      <y>10</y>
+      <width>136</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="font" >
+     <font>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text" >
+     <string>Selected Domain</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar" >
+   <property name="geometry" >
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>648</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_File" >
+    <property name="title" >
+     <string>&amp;File</string>
+    </property>
+    <addaction name="action_Quit" />
+   </widget>
+   <widget class="QMenu" name="menu_Help" >
+    <property name="title" >
+     <string>&amp;Help</string>
+    </property>
+    <addaction name="action_About" />
+   </widget>
+   <addaction name="menu_File" />
+   <addaction name="menu_Help" />
+  </widget>
+  <widget class="QStatusBar" name="statusbar" />
+  <action name="action_Quit" >
+   <property name="text" >
+    <string>&amp;Quit</string>
+   </property>
+  </action>
+  <action name="action_About" >
+   <property name="checkable" >
+    <bool>false</bool>
+   </property>
+   <property name="text" >
+    <string>&amp;About</string>
+   </property>
+  </action>
+ </widget>
+ <tabstops>
+  <tabstop>cbo_topDomains</tabstop>
+  <tabstop>tab_mainWidget</tabstop>
+  <tabstop>list_domains</tabstop>
+  <tabstop>txt_domainName</tabstop>
+  <tabstop>txt_domainAlias</tabstop>
+  <tabstop>cbx_createDomainAlias</tabstop>
+  <tabstop>btn_domainClear</tabstop>
+  <tabstop>btn_domainRemove</tabstop>
+  <tabstop>btn_domainAdd</tabstop>
+  <tabstop>btn_domainUpdate</tabstop>
+  <tabstop>list_users</tabstop>
+  <tabstop>tab_userWidget</tabstop>
+  <tabstop>txt_userRealName</tabstop>
+  <tabstop>txt_userUserName</tabstop>
+  <tabstop>txt_userPasswd</tabstop>
+  <tabstop>txt_userHomeDir</tabstop>
+  <tabstop>cbx_userHidePW</tabstop>
+  <tabstop>btn_userClear</tabstop>
+  <tabstop>btn_userRemove</tabstop>
+  <tabstop>txt_userForwardInfo</tabstop>
+  <tabstop>btn_userAdd</tabstop>
+  <tabstop>btn_userUpdate</tabstop>
+  <tabstop>list_alias</tabstop>
+  <tabstop>tab_aliasWidget</tabstop>
+  <tabstop>txt_aliasUserName</tabstop>
+  <tabstop>btn_aliasClear</tabstop>
+  <tabstop>btn_aliasRemove</tabstop>
+  <tabstop>btn_aliasAdd</tabstop>
+  <tabstop>btn_aliasUpdate</tabstop>
+  <tabstop>txt_aliasWhitelist</tabstop>
+  <tabstop>txt_aliasForwardInfo</tabstop>
+  <tabstop>txt_userWhitelist</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>action_Quit</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>331</x>
+     <y>204</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <designerdata>
+  <property name="gridDeltaX" >
+   <number>10</number>
+  </property>
+  <property name="gridDeltaY" >
+   <number>10</number>
+  </property>
+  <property name="gridSnapX" >
+   <bool>true</bool>
+  </property>
+  <property name="gridSnapY" >
+   <bool>true</bool>
+  </property>
+  <property name="gridVisible" >
+   <bool>true</bool>
+  </property>
+ </designerdata>
+</ui>
